@@ -1,7 +1,7 @@
 <?php
 /*
 Ultra Prod WPUSSC Admin Options
-Version: v1.4.4
+Version: v1.4.5
 */
 /*
 	This program is free software; you can redistribute it
@@ -250,8 +250,17 @@ function show_wp_cart_options_page () {
 
 	?>
 
- 	<script type="text/javascript" charset="utf8" ><!-- jQuery.noConflict(); jQuery(function($) { $(document).ready(function() { $( "#tabs" ).tabs(); });}); //--></script>
+	<!-- WP UI -->
+ 	<script type="text/javascript" charset="utf8" >
+ 		jQuery.noConflict();
+ 		jQuery(function($) { 
+ 			$(document).ready(function() { 
+ 				$( "#tabs" ).tabs(); 
+ 			});
+ 		});
+ 	</script>
 
+	<!-- WP tab display -->
 	<div id="tabs">
 	<ul>
 		<li><a href="#tabs-3"><span class="showme"><?php _e("Do you like WUSPSC ?", "WUSPSC"); ?></span></a></li>

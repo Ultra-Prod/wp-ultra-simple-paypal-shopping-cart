@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Ultra simple Paypal Cart
-Version: v4.3.9.0
+Version: v4.3.9.1
 Plugin URI: https://www.ultra-prod.com/?p=86
 Author: Mike Castro Demaria, Franck Maussand
 Author URI: https://www.ultra-prod.com
@@ -29,7 +29,7 @@ if(!isset($_SESSION)) {
 }
 
 if ( !defined( 'WUSPSC_VERSION' ) )
-    define( 'WUSPSC_VERSION', '4.3.8.8' );
+    define( 'WUSPSC_VERSION', '4.3.9.1' );
 
 if ( !defined( 'WUSPSC_CART_URL' ) )
     define('WUSPSC_CART_URL', plugins_url('',__FILE__));
@@ -116,7 +116,7 @@ if($_POST['addcart']) {
 		$product = array(
 			'name'			=> stripslashes($_POST['product']),
 			'price'			=> $price,
-			'quantity'		=> $_POST['quantity'],
+			'quantity'		=> jasonwoof_format_int_1($_POST['quantity']),
 			'shipping'		=> $_POST['shipping'],
 			'cartLink'		=> $_POST['cartLink'],
 			'item_number'	=> $_POST['item_number']
@@ -206,9 +206,6 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 	if(!empty($return))
 		$urls .= '<input type="hidden" name="return" value="'.$return.'" >';
 
-	// for test
-	// mark.phillips@mophilly.com bug report 06/05/2014 22:39
-	// set up IPN notification string
 	$notify = WUSPSC_CART_URL.'/paypal.php';
 
 	if($use_affiliate_platform) {
@@ -220,19 +217,7 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 	if(!empty($notify))
 		$urls .= '<input type="hidden" name="notify_url" value="'.$notify.'" >';
 
-	/*
-	if($use_affiliate_platform) {
-		if(function_exists('wp_aff_platform_install')) {
-			$notify = WP_AFF_PLATFORM_URL.'/api/ipn_handler.php';
-			//$notify = WUSPSC_CART_URL.'/paypal.php';
-			$urls .= '<input type="hidden" name="notify_url" value="'.$notify.'" >';
-		}
-	}
-	// end mark.phillips@mophilly.com bug report
-	*/
-
-	$title = get_option('wp_cart_title');
-	//if(empty($title)) $title = __("Your Shopping Cart", "WUSPSC");
+	$title = (!empty(get_option('wp_cart_title')))? get_option('wp_cart_title') : __("Your Shopping Cart", "WUSPSC");
 
 	global $plugin_dir_name;
 
@@ -352,12 +337,12 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 					$product_thumbnail = "";
 				}
 
-				$cartProductDisplayLink = '<a href="'.$item['cartLink'].'">'.$product_thumbnail.$name.'</a>';
+				$cartProductDisplayLink = '<a href="'.jasonwoof_enc_attr($item['cartLink']).'">'.$product_thumbnail.jasonwoof_enc_html($name).'</a>';
 			} else {
 				$cartProductDisplayLink = $name;
 			}
 
-			$output_name .= "<input type=\"hidden\" name=\"product\" value=\"".$name."\" >";
+			$output_name .= "<input type=\"hidden\" name=\"product\" value=\"".jasonwoof_enc_attr($name)."\" >";
 
 			$output .= "
 			<tr id=\"cartcontent\" class=\"cartcontent\">
@@ -366,13 +351,13 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 					<form method=\"post\"  action=\"\" name='pcquantity' style='display: inline'>
 					".$output_name."
 					<input type=\"hidden\" name=\"cquantity\" value=\"1\" >
-					<input class=\"iquantity\" type=\"text\" name=\"quantity\" value=\"".$item['quantity']."\" size=\"1\"  onchange=\"this.form.submit();\" ><input class=\"pinfo\" type=\"image\" title=\"Reload\" value=\"Reload\" src=\"".WUSPSC_CART_URL."/images/Shoppingcart_reload.png\">
+					<input class=\"iquantity\" type=\"text\" name=\"quantity\" value=\"".jasonwoof_enc_attr($item['quantity'])."\" size=\"1\"  onchange=\"this.form.submit();\" ><input class=\"pinfo\" type=\"image\" title=\"Reload\" value=\"Reload\" src=\"".WUSPSC_CART_URL."/images/Shoppingcart_reload.png\">
 					</form>
 				</td>
 				<td class=\"left\">".print_payment_currency(($price * $item['quantity']), $paypal_symbol, $decimal, get_option('cart_currency_symbol_order'))."</td>
 				<td>
 					<form method=\"post\"  action=\"\">
-					<input type=\"hidden\" name=\"product\" value=\"".$item['name']."\" >
+					<input type=\"hidden\" name=\"product\" value=\"".jasonwoof_enc_attr($item['name'])."\" >
 					<input type='hidden' name='delcart' value='1' >
 					<input class=\"remove\" type=\"image\" src='".WUSPSC_CART_URL."/images/Shoppingcart_delete.png' value='".get_option('remove_text')."' title='".get_option('remove_text')."' >
 					</form>
@@ -381,16 +366,16 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 			";
 
 			$form .= "
-				<input type=\"hidden\" name=\"item_name_{$count}\" value=\"{$name}\" >
-				<input type=\"hidden\" name=\"amount_{$count}\" value='{$price}' >
-				<input type=\"hidden\" name=\"quantity_{$count}\" value=\"{$item['quantity']}\" >
-				<input type=\"hidden\" name=\"amount_{$count}\" value=\"{$price}\" >
-				<input type='hidden' name='item_number' value='".$item['item_number']."' >
+				<input type=\"hidden\" name=\"item_name_{$count}\" value=\"".jasonwoof_enc_attr($name)."\" >
+				<input type=\"hidden\" name=\"amount_{$count}\" value='".jasonwoof_enc_attr($price)."' >
+				<input type=\"hidden\" name=\"quantity_{$count}\" value=\"".jasonwoof_enc_attr($item['quantity'])."\" >
+				<input type=\"hidden\" name=\"amount_{$count}\" value=\"".jasonwoof_enc_attr($price)."\" >
+				<input type='hidden' name='item_number' value='".jasonwoof_enc_attr($item['item_number'])."' >
 			";
 
 			$item_tax = (!empty($display_vat) && is_numeric($display_vat) )? round(($price * $display_vat) / 100, 2) : 0 ;
 			if(!empty($item_tax)){
-				$form .= "<input type=\"hidden\" name=\"tax_{$count}\"  value=\"{$item_tax}\">";
+				$form .= "<input type=\"hidden\" name=\"tax_{$count}\"  value=\"".jasonwoof_enc_attr($item_tax)."\">";
 				$total_vat = $total_vat + ( $item_tax * $item['quantity'] );
 			}
 
@@ -399,7 +384,7 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 
 		if(!get_option('wpus_shopping_cart_use_profile_shipping')) {
 			$postage_cost = number_format($postage_cost,2);
-			$form .= "<input type=\"hidden\" name=\"shipping_1\" value='".$postage_cost."' >";
+			$form .= "<input type=\"hidden\" name=\"shipping_1\" value='".jasonwoof_enc_attr($postage_cost)."' >";
 		}
 
 		if(get_option('wpus_shopping_cart_collect_address')) {//force address collection
@@ -500,7 +485,7 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 			  	// all data sent to paypal
 			  	$output .= $urls.'<input type="hidden" name="business" value="'.$email.'"><input type="hidden" name="currency_code" value="'.$paypal_currency.'"><input type="hidden" name="cmd" value="_cart"><input type="hidden" name="upload" value="1"><input type="hidden" name="rm" value="2"><input type="hidden" name="mrb" value="DKBDRZGU62JYC"><input type="hidden" name="bn" value="UltraProdSAS_SI_ADHOC">';
 
-				if(!empty($vat)) $output .= '<input type="hidden" name="tax_cart" value="'.$total_vat.'" >';
+				if(!empty($vat)) $output .= '<input type="hidden" name="tax_cart" value="'.jasonwoof_enc_attr($total_vat).'" >';
 
 				if($use_affiliate_platform) {
 					$output .= wp_cart_add_custom_field();

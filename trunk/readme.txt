@@ -5,7 +5,7 @@ Tags:  shop, cart, checkout, coupon, discount, e-shop, e-commerce, shopping cart
 Requires at least: 2.6
 Tested up to: 4.5.3
 Stable tag: trunk
-License: GPLv3
+License: GPLv3 or later
 
 WordPress Ultra Simple Paypal Shopping Cart it's ultra simple to add cart to your WP. All that is required is placing a shortcode.
 
@@ -220,7 +220,10 @@ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 * add VAT/tax display custom string
 = V4.3.9.0 =
 * notice remove on addToCartButton (Wordfence report)
+= V4.3.9.1 =
+* Enhancement : add jasonwoof patch to sanitized and encoded post data appears in html output (thanks jasonwoof)
 
 == Upgrade Notice ==
 
-Easy to used PayPal Shopping Ca
+Always backup you WP before any upgrade. After the upgrade it's too late.
+We always try to make updates compatible with old version. If any problem, please drop us an email or post to support forums.

@@ -1,7 +1,7 @@
 <?php
 /*
 Ultra Prod WPUSSC Functions
-Version: v1.3.8
+Version: v1.3.9
 */
 /*
 	This program is free software; you can redistribute it
@@ -16,6 +16,33 @@ Version: v1.3.8
 
 $__UP_plug_prefix = "wpussc";
 
+/* jasonwoof utility functions for sanitizing and encoding data */
+function jasonwoof_enc_html($str) {
+	$str = str_replace('&', '&amp;', $str);
+	$str = str_replace('<', '&lt;', $str);
+	$str = str_replace('>', '&gt;', $str);
+	return $str;
+}
+function jasonwoof_enc_attr($str) {
+	$str = str_replace('&', '&amp;', $str);
+	$str = str_replace('"', '&quot;', $str);
+	return $str;
+}
+//sanitize an integer. return 1 if it's blank
+function jasonwoof_format_int_1($str) {
+	# remove all non-digits
+	$str = preg_replace('|[^0-9]|', '', $str);
+	# remove leading zeros (but not last digit)
+	$str = preg_replace('|^0*([0-9])|', '\1', $str);
+	# default to 1 (if there are no digits)
+	if($str == '') {
+		return '1';
+	}
+	return $str;
+}
+/* end jasonwoof */
+
+/* */
 function always_show_cart_handler($atts) {
 	return print_wpus_shopping_cart();
 }

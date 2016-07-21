@@ -1,7 +1,11 @@
 WordPress Ultra Simple Paypal Shopping Cart
 Mike Castro Demaria & Ultra Prod Team
 
-* More Changelog can be found at [Ultra Prod forum](http://www.ultra-prod.com/developpement-support/wp-ultra-simple-paypal-shopping-cart-group3/annoucements-and-updates-forum7/ "Ulra Prod forum").
+= V4.3.9.1 =
+* Enhancement : add jasonwoof patch to sanitized and encoded post data appears in html output (thanks jasonwoof)
+
+= V4.3.9.0 =
+* notice remove on addToCartButton (Wordfence report)
 
 = V4.3.8.9 =
 * add VAT/tax display custom string

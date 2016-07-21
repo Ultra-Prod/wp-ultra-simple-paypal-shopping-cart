@@ -1,0 +1,775 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-ultra-simple-paypal-"
+"shopping-cart\n"
+"POT-Creation-Date: 2012-08-13 21:43:16+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: wp_ultra_simple_shopping_cart.php:126
+msgid ""
+"Shopping Cart Configuration Error! You must specify a value in the 'Checkout "
+"Page URL' field for the automatic redirection feature to work!"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:177 wpussc-option.php:119
+msgid "USD"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:181 wpussc-option.php:122
+msgid "$"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:207
+msgid "Cart"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:348
+msgid "Proceed to Checkout &raquo;"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:367
+msgid "Checkout"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:367 wp_ultra_simple_shopping_cart.php:369
+msgid "Make payments with PayPal - it\\'s fast, free and secure!"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:407 wp_ultra_simple_shopping_cart.php:544
+#: wp_ultra_simple_shopping_cart.php:567 wp_ultra_simple_shopping_cart.php:632
+#: wpussc-option.php:151
+msgid "Add to Cart"
+msgstr ""
+
+#: wp_ultra_simple_shopping_cart.php:505 wp_ultra_simple_shopping_cart.php:599
+msgid "Error: no price configured"
+msgstr ""
+
+#: wpussc-function.php:207
+msgid "Set the Plugin Settings from the Settings menu"
+msgstr ""
+
+#: wpussc-function.php:213
+msgid "Display WP Ultra Simple Paypal Shopping Cart."
+msgstr ""
+
+#: wpussc-function.php:214 wpussc-function.php:215
+msgid "WP Ultra Simple Paypal Shopping Cart"
+msgstr ""
+
+#: wpussc-function.php:221 wpussc-option.php:226
+msgid "Settings"
+msgstr ""
+
+#: wpussc-option.php:21
+msgid "Your Shopping Cart"
+msgstr ""
+
+#: wpussc-option.php:22
+msgid "Your cart is empty"
+msgstr ""
+
+#: wpussc-option.php:25
+msgid "Visit The Shop"
+msgstr ""
+
+#: wpussc-option.php:26
+msgid ""
+"Hit enter or click on reload icon to submit the updated quantity please."
+msgstr ""
+
+#: wpussc-option.php:28
+msgid "products in your cart"
+msgstr ""
+
+#: wpussc-option.php:29
+msgid "product in your cart"
+msgstr ""
+
+#: wpussc-option.php:34
+msgid "Subtotal"
+msgstr ""
+
+#: wpussc-option.php:35 wpussc-option.php:267
+msgid "Shipping"
+msgstr ""
+
+#: wpussc-option.php:36
+msgid "Total"
+msgstr ""
+
+#: wpussc-option.php:37
+msgid "Item Name"
+msgstr ""
+
+#: wpussc-option.php:38
+msgid "Quantity"
+msgstr ""
+
+#: wpussc-option.php:39
+msgid "Price"
+msgstr ""
+
+#: wpussc-option.php:40
+msgid "Remove"
+msgstr ""
+
+#: wpussc-option.php:115
+msgid "Options Updated!"
+msgstr ""
+
+#: wpussc-option.php:157
+msgid "%d item%s in your cart"
+msgstr ""
+
+#: wpussc-option.php:159
+msgid "Cart empty"
+msgstr ""
+
+#: wpussc-option.php:225
+msgid "Usage"
+msgstr ""
+
+#: wpussc-option.php:227
+msgid "About & donate"
+msgstr ""
+
+#: wpussc-option.php:228
+msgid "Discount Code"
+msgstr ""
+
+#: wpussc-option.php:229
+msgid "Support"
+msgstr ""
+
+#: wpussc-option.php:230
+msgid "Readme"
+msgstr ""
+
+#: wpussc-option.php:234
+msgid "WP Ultra Simple Shopping Cart Usage"
+msgstr ""
+
+#: wpussc-option.php:235
+msgid "For information, updates and detailed documentation, please visit:"
+msgstr ""
+
+#: wpussc-option.php:236
+msgid "For support, please use our dedicated forum:"
+msgstr ""
+
+#: wpussc-option.php:236
+msgid "WPUSPSC Support Forum"
+msgstr ""
+
+#: wpussc-option.php:239
+msgid "1. create a PayPal account (no cost for basic account)"
+msgstr ""
+
+#: wpussc-option.php:241
+msgid ""
+"2. Create post or page presenting the product or service and add caddy "
+"shortcode in the post. See example and possibilities following:"
+msgstr ""
+
+#: wpussc-option.php:244
+msgid ""
+"To add the 'Add to Cart' button simply add the trigger text to a post or "
+"page, next to the product. Replace PRODUCT-NAME and PRODUCT-PRICE with the "
+"actual name and price."
+msgstr ""
+
+#: wpussc-option.php:245 wpussc-option.php:261 wpussc-option.php:267
+#: wpussc-option.php:273 wpussc-option.php:279 wpussc-option.php:285
+msgid "PRODUCT-NAME"
+msgstr ""
+
+#: wpussc-option.php:245 wpussc-option.php:273 wpussc-option.php:279
+#: wpussc-option.php:285
+msgid "PRODUCT-PRICE"
+msgstr ""
+
+#: wpussc-option.php:246 wpussc-option.php:262 wpussc-option.php:268
+#: wpussc-option.php:274 wpussc-option.php:280 wpussc-option.php:286
+msgid "eg."
+msgstr ""
+
+#: wpussc-option.php:246 wpussc-option.php:262 wpussc-option.php:268
+#: wpussc-option.php:274 wpussc-option.php:280 wpussc-option.php:286
+msgid "Test Product"
+msgstr ""
+
+#: wpussc-option.php:250
+msgid ""
+"To add the 'Add to Cart' button on you theme's template files, use &lt;?php "
+"echo print_wp_cart_button_for_product('PRODUCT-NAME', PRODUCT-PRICE); ?"
+"&gt; . Replace PRODUCT-NAME and PRODUCT-PRICE with the actual name and price."
+msgstr ""
+
+#: wpussc-option.php:255
+msgid ""
+"To display the numbers of items in cart use &lt;?php echo wpusc_cart_item_qty"
+"(); ?&gt; . The string display are set in the plugin's settings."
+msgstr ""
+
+#: wpussc-option.php:260
+msgid "To use variation of the price use the following trigger text:"
+msgstr ""
+
+#: wpussc-option.php:261 wpussc-option.php:267 wpussc-option.php:273
+#: wpussc-option.php:279 wpussc-option.php:285
+msgid "VARIATION-NAME"
+msgstr ""
+
+#: wpussc-option.php:261 wpussc-option.php:267
+msgid "VARIATION-LABEL1"
+msgstr ""
+
+#: wpussc-option.php:261 wpussc-option.php:267
+msgid "VARIATION-PRICE1"
+msgstr ""
+
+#: wpussc-option.php:261 wpussc-option.php:267
+msgid "VARIATION-LABEL2"
+msgstr ""
+
+#: wpussc-option.php:261 wpussc-option.php:267
+msgid "VARIATION-PRICE2"
+msgstr ""
+
+#: wpussc-option.php:262 wpussc-option.php:268
+msgid "Size|Small,1.10|Medium,2.10|Large,3.10"
+msgstr ""
+
+#: wpussc-option.php:266
+msgid ""
+"To use variation of the price and shipping use the following trigger text:"
+msgstr ""
+
+#: wpussc-option.php:268
+msgid "Shipping|normal,6.50|fast,10.00"
+msgstr ""
+
+#: wpussc-option.php:272
+msgid "To use variation control use the following trigger text:"
+msgstr ""
+
+#: wpussc-option.php:273 wpussc-option.php:279 wpussc-option.php:285
+msgid "VARIATION1"
+msgstr ""
+
+#: wpussc-option.php:273 wpussc-option.php:279 wpussc-option.php:285
+msgid "VARIATION2"
+msgstr ""
+
+#: wpussc-option.php:273 wpussc-option.php:279 wpussc-option.php:285
+msgid "VARIATION3"
+msgstr ""
+
+#: wpussc-option.php:278
+msgid ""
+"To use variation control with simple shipping use the following trigger text:"
+msgstr ""
+
+#: wpussc-option.php:279
+msgid "SHIPPING-COST"
+msgstr ""
+
+#: wpussc-option.php:280 wpussc-option.php:286
+msgid "Size|Small|Medium|Large"
+msgstr ""
+
+#: wpussc-option.php:284
+msgid ""
+"To use multiple variation (unlimited variation) option use the following "
+"trigger text:"
+msgstr ""
+
+#: wpussc-option.php:286
+msgid "Color|Red|Green"
+msgstr ""
+
+#: wpussc-option.php:291
+msgid ""
+"3. To add the shopping cart to a post or page (eg. checkout page) simply add "
+"the shortcode"
+msgstr ""
+
+#: wpussc-option.php:293
+msgid "To display checkout to a post or page, simply add the shortcode"
+msgstr ""
+
+#: wpussc-option.php:294
+msgid "Or use the sidebar widget to add the shopping cart to the sidebar."
+msgstr ""
+
+#: wpussc-option.php:296
+msgid ""
+"You must use [validate_wp_shopping_cart] shortcode on another page if you "
+"want to use the 3 steps process."
+msgstr ""
+
+#: wpussc-option.php:299 wpussc-option.php:308
+msgid "Create a page with the shortcode"
+msgstr ""
+
+#: wpussc-option.php:300
+msgid ""
+"Create a page with your form (<a href=\"http://www.deliciousdays.com/cforms-"
+"plugin/\" target=\"_blank\">Cform2</a> is the better choice) and do the "
+"following configuration to your form:"
+msgstr ""
+
+#: wpussc-option.php:302
+msgid "Uncheck \"Ajax enabled\""
+msgstr ""
+
+#: wpussc-option.php:303 wpussc-option.php:566
+msgid "Go to Form Settings"
+msgstr ""
+
+#: wpussc-option.php:304 wpussc-option.php:567
+msgid "Go Core Form Admin / Email Options section"
+msgstr ""
+
+#: wpussc-option.php:305 wpussc-option.php:568
+msgid "Go to Redirect option"
+msgstr ""
+
+#: wpussc-option.php:306 wpussc-option.php:569
+msgid ""
+"And check enable alternative success page (redirect), plus past your final "
+"page's URL (the page who contain [show_wp_shopping_cart] tag)"
+msgstr ""
+
+#: wpussc-option.php:321
+msgid "Do you like WUSPSC ?"
+msgstr ""
+
+#: wpussc-option.php:322
+msgid "Please, if you like WUSPSC, give it a good rating"
+msgstr ""
+
+#: wpussc-option.php:322
+msgid ""
+" and please consider to donate a few $, &#8364; or &pound; to help me to "
+"give time for user&#8217;s support, add new features and fast upgrades."
+msgstr ""
+
+#: wpussc-option.php:331
+msgid ""
+"Or if you like down-tempo / ambiant / electronic music, you can buy a few "
+"tracks from one of my CD on Amazon."
+msgstr ""
+
+#: wpussc-option.php:341
+msgid "Thanks a lot for your support !!!"
+msgstr ""
+
+#: wpussc-option.php:345
+msgid "Coupon Code"
+msgstr ""
+
+#: wpussc-option.php:346
+msgid "Do you need discount Code feature?"
+msgstr ""
+
+#: wpussc-option.php:347
+msgid "If the answer is yes, please ask it on "
+msgstr ""
+
+#: wpussc-option.php:347
+msgid "this Forum thread"
+msgstr ""
+
+#: wpussc-option.php:353
+msgid "WP Ultra Simple Shopping Cart Read ME"
+msgstr ""
+
+#: wpussc-option.php:362
+msgid "WP Ultra Simple Shopping Cart Support"
+msgstr ""
+
+#: wpussc-option.php:364
+msgid "Do you need support or new features?"
+msgstr ""
+
+#: wpussc-option.php:365
+msgid "Just ask on "
+msgstr ""
+
+#: wpussc-option.php:365
+msgid "WUSPSC Forum."
+msgstr ""
+
+#: wpussc-option.php:366
+msgid "Do you like the WP Ultra Simple Paypal Shopping Cart Plugin?"
+msgstr ""
+
+#: wpussc-option.php:367
+msgid "Please"
+msgstr ""
+
+#: wpussc-option.php:367
+msgid "give it a good rating"
+msgstr ""
+
+#: wpussc-option.php:367
+msgid "on Wordpress website"
+msgstr ""
+
+#: wpussc-option.php:372
+msgid "WP Ultra Simple Shopping Cart Settings"
+msgstr ""
+
+#: wpussc-option.php:381
+msgid "Paypal Email Address"
+msgstr ""
+
+#: wpussc-option.php:386
+msgid "Paypal Sandbox (cart is in test)"
+msgstr ""
+
+#: wpussc-option.php:387
+msgid ""
+"You must open a free developer account to use sandbox for your tests before "
+"go live.<br /> Go to <a href=\"https://developer.paypal.com/\">https://"
+"developer.paypal.com/</a>, register and connect."
+msgstr ""
+
+#: wpussc-option.php:391
+msgid "Use PayPal Profile Based Shipping"
+msgstr ""
+
+#: wpussc-option.php:392
+msgid "Check this if you want to use"
+msgstr ""
+
+#: wpussc-option.php:392
+msgid "PayPal profile based shipping"
+msgstr ""
+
+#: wpussc-option.php:392
+msgid ""
+"Using this will ignore any other shipping options that you have specified in "
+"this plugin."
+msgstr ""
+
+#: wpussc-option.php:396
+msgid "Must Collect Shipping Address on PayPal"
+msgstr ""
+
+#: wpussc-option.php:397
+msgid ""
+"If checked the customer will be forced to enter a shipping address on PayPal "
+"when checking out."
+msgstr ""
+
+#: wpussc-option.php:403
+msgid "Base Shipping Cost"
+msgstr ""
+
+#: wpussc-option.php:404
+msgid ""
+"This is the base shipping cost that will be added to the total of individual "
+"products shipping cost. Put 0 if you do not want to charge shipping cost or "
+"use base shipping cost."
+msgstr ""
+
+#: wpussc-option.php:408
+msgid "Free Shipping for Orders Over"
+msgstr ""
+
+#: wpussc-option.php:409
+msgid ""
+"When a customer orders more than this amount he/she will get free shipping. "
+"Leave empty if you do not want to use it."
+msgstr ""
+
+#: wpussc-option.php:413
+msgid "Currency"
+msgstr ""
+
+#: wpussc-option.php:414 wpussc-option.php:418 wpussc-option.php:434
+msgid "e.g."
+msgstr ""
+
+#: wpussc-option.php:414
+msgid ""
+"Full list on <a target=\"_blank\" href=\"https://cms.paypal.com/us/cgi-bin/?"
+"cmd=_render-content&content_ID=developer/e_howto_api_nvp_currency_codes"
+"\">PayPal website</a>"
+msgstr ""
+
+#: wpussc-option.php:417
+msgid "Currency Symbol"
+msgstr ""
+
+#: wpussc-option.php:422
+msgid "Currency display"
+msgstr ""
+
+#: wpussc-option.php:428
+msgid "Custom Paypal button"
+msgstr ""
+
+#: wpussc-option.php:429
+msgid ""
+" If ticked, use .wp_cart_checkout_button class to your theme to override "
+"default settings."
+msgstr ""
+
+#: wpussc-option.php:433
+msgid "Add to Cart button text or Image"
+msgstr ""
+
+#: wpussc-option.php:434
+msgid ""
+"To use a customized image as the button simply enter the URL of the image "
+"file."
+msgstr ""
+
+#: wpussc-option.php:438
+msgid "Cart button class name (without the dot)"
+msgstr ""
+
+#: wpussc-option.php:443
+msgid "Display product name"
+msgstr ""
+
+#: wpussc-option.php:444
+msgid " If ticked, display the product's name, otherwise hide it"
+msgstr ""
+
+#: wpussc-option.php:448
+msgid "Display Product Options Inline"
+msgstr ""
+
+#: wpussc-option.php:449
+msgid ""
+" If ticked, display the product input without line break, otherwise it "
+"display each input to a new line."
+msgstr ""
+
+#: wpussc-option.php:453
+msgid "Display quantity field"
+msgstr ""
+
+#: wpussc-option.php:454
+msgid ""
+" If ticked, display the quantity field to choose quantity before add to "
+"cart, otherwise quantity is 1."
+msgstr ""
+
+#: wpussc-option.php:458
+msgid "Products Page URL"
+msgstr ""
+
+#: wpussc-option.php:459
+msgid ""
+"This is the URL of your products page if you have any. If used, the shopping "
+"cart widget will display a link to this page when cart is empty"
+msgstr ""
+
+#: wpussc-option.php:463
+msgid "Display Products URL in cart"
+msgstr ""
+
+#: wpussc-option.php:464
+msgid ""
+"If ticked, the product's link will not be display in cart. Activate it if "
+"you are using a page or a post for each product."
+msgstr ""
+
+#: wpussc-option.php:468
+msgid "Hide \"Cart Empty\" message"
+msgstr ""
+
+#: wpussc-option.php:469
+msgid ""
+"If ticked, the shopping cart empty message on page/post or widget will not "
+"be display."
+msgstr ""
+
+#: wpussc-option.php:473
+msgid "Hide items count display message"
+msgstr ""
+
+#: wpussc-option.php:474
+msgid ""
+"If ticked, the items in cart count message on page/post or widget will not "
+"be display."
+msgstr ""
+
+#: wpussc-option.php:478
+msgid "Hide Shopping Cart Image"
+msgstr ""
+
+#: wpussc-option.php:479
+msgid "If ticked the shopping cart image will not be shown."
+msgstr ""
+
+#: wpussc-option.php:483
+msgid "Shopping Cart title"
+msgstr ""
+
+#: wpussc-option.php:488
+msgid "Text/Image to Show When Cart Empty"
+msgstr ""
+
+#: wpussc-option.php:489
+msgid ""
+"You can either enter plain text or the URL of an image that you want to show "
+"when the shopping cart is empty"
+msgstr ""
+
+#: wpussc-option.php:493
+msgid "Singular \"product in your cart\" text"
+msgstr ""
+
+#: wpussc-option.php:497
+msgid "Plural \"products in your cart\" text"
+msgstr ""
+
+#: wpussc-option.php:502
+msgid "Subtotal text"
+msgstr ""
+
+#: wpussc-option.php:506
+msgid "Shipping text"
+msgstr ""
+
+#: wpussc-option.php:510
+msgid "Total text"
+msgstr ""
+
+#: wpussc-option.php:514
+msgid "Item name text"
+msgstr ""
+
+#: wpussc-option.php:518
+msgid "Quantity text"
+msgstr ""
+
+#: wpussc-option.php:522
+msgid "Price text"
+msgstr ""
+
+#: wpussc-option.php:526
+msgid "Item count text"
+msgstr ""
+
+#: wpussc-option.php:530
+msgid "No item in cart text"
+msgstr ""
+
+#: wpussc-option.php:534
+msgid "Remove text"
+msgstr ""
+
+#: wpussc-option.php:538
+msgid "Products page URL title"
+msgstr ""
+
+#: wpussc-option.php:543
+msgid "Return URL"
+msgstr ""
+
+#: wpussc-option.php:544
+msgid ""
+"This is the URL the customer will be redirected to after a successful payment"
+msgstr ""
+
+#: wpussc-option.php:548
+msgid "Automatic redirection to checkout page"
+msgstr ""
+
+#: wpussc-option.php:550
+msgid "Checkout Page URL"
+msgstr ""
+
+#: wpussc-option.php:551
+msgid ""
+"If checked the visitor will be redirected to the Checkout page after a "
+"product is added to the cart. You must enter a URL in the Checkout Page URL "
+"field for this to work."
+msgstr ""
+
+#: wpussc-option.php:555
+msgid "Reset Cart After Redirection to Return Page"
+msgstr ""
+
+#: wpussc-option.php:557
+msgid ""
+"If checked the shopping cart will be reset when the customer lands on the "
+"return URL (Thank You) page."
+msgstr ""
+
+#: wpussc-option.php:561
+msgid "3 steps cart form URL"
+msgstr ""
+
+#: wpussc-option.php:562
+msgid ""
+"Configure this URL if you like to have a form as step 2, before the final "
+"paypal cart (use [validate_wp_shopping_cart] shortcod on th first step cart "
+"page). Leave empty if you not need this."
+msgstr ""
+
+#: wpussc-option.php:563
+msgid ""
+"You can use <a href=\"http://www.deliciousdays.com/cforms-plugin/\" target="
+"\"_blank\">Cform2</a> for example and set your form with the following "
+"informations."
+msgstr ""
+
+#: wpussc-option.php:565
+msgid "uncheck \"Ajax enabled\""
+msgstr ""
+
+#: wpussc-option.php:571
+msgid ""
+"This will permit to receive user's input before paypal final validation."
+msgstr ""
+
+#: wpussc-option.php:572
+msgid ""
+"The customer will be redirected to cart with paypal button after successful "
+"form submit"
+msgstr ""
+
+#: wpussc-option.php:579
+msgid "Update Options &raquo;"
+msgstr ""
+
+#: wpussc-option.php:585
+msgid "Like the WP Ultra Simple Paypal Shopping Cart Plugin?"
+msgstr ""
+
+#: wpussc-option.php:585
+msgid "Give it a good rating"
+msgstr ""
+
+#: wpussc-option.php:589
+msgid "WP Ultra simple Paypal Cart Options"
+msgstr ""
+
+#: wpussc-option.php:598
+msgid "WP Ultra simple Paypal Cart"
+msgstr ""
+
+#: wpussc-option.php:598
+msgid "Ultra simple Cart"
+msgstr ""
+
+#: wpussc-widget.php:22
+msgid "Shopping Cart"
+msgstr ""

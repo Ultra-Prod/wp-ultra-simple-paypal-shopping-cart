@@ -1,0 +1,56 @@
+/*
+Ultra Prod WPUSSC Admin CSS
+Version: v1.1
+*/
+/*
+	This program is free software; you can redistribute it
+	under the terms of the GNU General Public License version 2,
+	as published by the Free Software Foundation.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+*/
+/* back office styles */
+#poststuff h2 { padding: 0 0 20px !important;}
+
+.icon32 { margin: 0 3px 0 0 !important; }
+
+#tabs-3 ul { display: block;}
+#tabs-3 ul li { display: inline-block; margin: 10px 20px; font-size: 1.5em;}
+#tabs-3 img { display: inline-block; margin: 10px 20px; }
+
+#tabs-3 .donate { margin: 10px auto; width:30%; text-align:left; }
+
+#tabs-5 .content { overflow: auto;border: 1px solid #666;padding: 8px; height: 800px;}
+
+#tabs-5 pre { white-space:pre-wrap; width:110ex; }
+
+.showme { /*text-decoration: blink; */  color: green; }
+
+#helpme { background-color: yellow; color: darkblue; padding: 1.2em; }
+#helpme p {
+	font-size: 1.1em;
+    font-weight: bolder;
+}
+
+
+ol li ol {
+	margin-left: 2em;
+	list-style: initial;
+	list-style-type: lower-latin;
+	margin-top: 5px;
+}
+
+div#tabs-3 h2 {
+	padding-bottom: 0 !important;
+}
+
+div#tabs-3 div#ecebiz img {
+	width: 100%;
+	height: auto;
+	border: 1px solid #DDD;
+	border-bottom: none;
+	margin: 0;
+}

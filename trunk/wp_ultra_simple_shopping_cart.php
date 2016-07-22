@@ -29,7 +29,7 @@ if(!isset($_SESSION)) {
 }
 
 if ( !defined( 'WUSPSC_VERSION' ) )
-    define( 'WUSPSC_VERSION', '4.3.9.1' );
+    define( 'WUSPSC_VERSION', '4.3.9.2' );
 
 if ( !defined( 'WUSPSC_CART_URL' ) )
     define('WUSPSC_CART_URL', plugins_url('',__FILE__));

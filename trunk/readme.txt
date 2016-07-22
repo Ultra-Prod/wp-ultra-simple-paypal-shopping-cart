@@ -220,7 +220,7 @@ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 * add VAT/tax display custom string
 = V4.3.9.0 =
 * notice remove on addToCartButton (Wordfence report)
-= V4.3.9.1 =
+= V4.3.9.2 =
 * Enhancement : add jasonwoof patch to sanitized and encoded post data appears in html output (thanks jasonwoof)
 
 == Upgrade Notice ==

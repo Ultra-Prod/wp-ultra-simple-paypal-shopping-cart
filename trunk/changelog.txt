@@ -1,7 +1,7 @@
 WordPress Ultra Simple Paypal Shopping Cart
 Mike Castro Demaria & Ultra Prod Team
 
-= V4.3.9.1 =
+= V4.3.9.2 =
 * Enhancement : add jasonwoof patch to sanitized and encoded post data appears in html output (thanks jasonwoof)
 
 = V4.3.9.0 =

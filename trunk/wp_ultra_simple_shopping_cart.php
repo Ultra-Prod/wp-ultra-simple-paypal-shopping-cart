@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Ultra simple Paypal Cart
-Version: v4.3.9.1
+Version: v4.3.9.2
 Plugin URI: https://www.ultra-prod.com/?p=86
 Author: Mike Castro Demaria, Franck Maussand
 Author URI: https://www.ultra-prod.com
@@ -217,7 +217,8 @@ function print_wpus_shopping_cart( $step="paypal", $type="page") {
 	if(!empty($notify))
 		$urls .= '<input type="hidden" name="notify_url" value="'.$notify.'" >';
 
-	$title = (!empty(get_option('wp_cart_title')))? get_option('wp_cart_title') : __("Your Shopping Cart", "WUSPSC");
+	$wp_cart_title = get_option('wp_cart_title');
+	$title = (!empty($wp_cart_title))? $wp_cart_title : __("Your Shopping Cart", "WUSPSC");
 
 	global $plugin_dir_name;
 

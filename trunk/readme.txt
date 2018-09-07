@@ -1,13 +1,13 @@
 === WordPress Ultra Simple Paypal Shopping Cart ===
 Contributors: mikecastrodemaria , franckmaussand
-Donate link: http://www.ultra-prod.com/?p=86
-Tags:  shop, cart, checkout, coupon, discount, e-shop, e-commerce, shopping cart, paypal, sell, sales, store, PayPal express checkout, PayPal, payments, compact cart, digital downloads, online shop, paypal cart, PayPal cart widget, Paypal shopping cart, sell digital products, sell products, sell service, selling, wordpress ecommerce, WordPress shopping cart, wordpress store
+Donate link: http://www.ultra-prod.com/
+Tags:  shop, cart, checkout, e-shop, e-commerce, shopping, cart, paypal, sell, store, payments, widget, products, service, selling, ecommerce, shopping cart
 Requires at least: 2.6
-Tested up to: 4.5.3
+Tested up to: 4.9.8
 Stable tag: trunk
 License: GPLv3 or later
 
-WordPress Ultra Simple Paypal Shopping Cart it's ultra simple to add cart to your WP. All that is required is placing a shortcode.
+A Paypal Shopping Cart solution, simple way to add products and carts everywhere you like to your WordPress. All that is required is placing a shortcode.
 
 == Description ==
 = Introduction =
@@ -22,22 +22,43 @@ Other new features include, Price Variations, interface text's personalization, 
 This plugin customisable in the plugin admin and 100% customisable by CSS.
 To style the 'add to cart' button use cart button class style in the admin. Eg.
 
+For support and updates, please visit [WordPress Ultra Simple Paypal Shopping Cart Support Forum](https://wordpress.org/support/plugin/wp-ultra-simple-paypal-shopping-cart/ "go to WordPress Ultra Simple Paypal Shopping Cart forum")
+
+= Shopping Cart Setup Video Tutorials =
+
+There is 2 video tutorials to show you how to setup the shopping cart on your site.
+
 [youtube https://www.youtube.com/watch?v=Td_maZktJ1c]
 
 [youtube https://www.youtube.com/watch?v=SKkWHm3wo3E]
 
-For support and updates, please visit [WordPress Ultra Simple Paypal Shopping Cart Support Forum](https://wordpress.org/support/plugin/wp-ultra-simple-paypal-shopping-cart/ "go to WordPress Ultra Simple Paypal Shopping Cart forum")
 
 = Extensive payment options =
 *   PayPal Shopping Cart Accept PayPal Express Checkout.
 
-= PayPal Shopping Cart Features =
+
+= Features =
 
 * shortcode : Create "add to cart" button with options if needed (price, shipping, options variations). The cart's shortcode can be displayed on posts or pages.
-* theme's function : Use function to add dynamic "add to cart" button directly in your theme with dynamic datas.
-* configurations : Usefull strings can be customized to give a specific word for your business.
-* sandbox : You can use Paypal sandbox to test your integrations before go live.
-* and many more...
+* Theme’s function : Use function to add dynamic "add to cart" button directly in your theme with dynamic data.
+* Configurations : Usefull strings can be customised to give a specific word for your business.
+* Sandbox : You can use Paypal sandbox to test your integration before go live.
+* Minimal number of configuration items to keep the plugin lightweight.
+* Sell any kind of tangible products from your site.
+* Ability to sell services from your site.
+* Sell any type of media file that you upload to your WordPress site. For example: you can sell ebooks (PDF), music files (MP3), audio files, videos, photos, images, etc.
+* Show a nicely formatted product display box on the fly using a simple shortcode.
+* Collect special instructions from your customers on the PayPal checkout page.
+* Compatible with WordPress Multi-site Installation.
+* Ability to specify SKU (item number) for each of your products in the shortcode.
+* Ability to customise the add to cart button image and use a custom image for your purchase buttons.
+* Ability to add a compact shopping cart to your site using a shortcode.
+* Ability to show shopping cart with product image thumbnails.
+* Works nicely with responsive WordPress themes.
+* Can be translated into any language.
+* and more...
+
+And if something designs, don't hesitate to ask, we love new challenges who make us better.
 
 == Usage ==
 
@@ -104,16 +125,37 @@ You're ready to sell!
 4. Use the trigger text to add a product to a post or page where u want it to appear.
 
 == Frequently Asked Questions ==
-
-1. Can this plugin be used to accept paypal payment for a service or a product? Yes
-2. Does this plugin have a shopping cart? Yes.
-3. Can the shopping cart be added to a checkout page? Yes.
-4. Does this plugin have multiple currency support? Yes.
-5. Is the 'Add to Cart' button customizable? Yes.
-6. Does this plugin use a return URL to redirect customers to a specified page after Paypal has processed the payment? Yes.
-7. What is the 3 step process? 1) add items to cart 2) collect buyer information on a form 3) process transaction via paypal
-    (2 step process is steps 1 and 3 above)
-
+= Can this plugin be used to accept paypal payment for a service or a product? =
+Yes
+= Does this plugin have shopping cart =
+Yes
+= Can the shopping cart be added to a checkout page? =
+Yes
+= Does this plugin has multiple currency support? =
+Yes
+= Is the 'Add to Cart' button customizable? =
+Yes
+= Does this plugin use a return URL to redirect customers to a specified page after Paypal has processed the payment? =
+Yes
+= How can I add a buy button on the sidebar widget of my site? =
+Check the documentation on [how to add buy buttons to the sidebar](https://www.tipsandtricks-hq.com/ecommerce/wordpress-shopping-cart-additional-resources-322#add_button_in_sidebar)
+= Can I use this plugin to sell digital downloads? =
+Yes. See the [digital download usage documentation](https://www.tipsandtricks-hq.com/ecommerce/wp-simple-cart-sell-digital-downloads-2468)
+= Can I configure discount coupon with this shopping cart plugin? =
+Yes. you can setup discount coupons from the "Coupon/Discount" interface of the plugin.
+= Can I configure product sale notification so I get notified when a sale is made? =
+Yes. You can configure sale notification from the "Email Settings" interface of the plugin.
+= Can I modify the product box thumbnail image? =
+Yes.
+= Can I customize the format of the price display? =
+Yes.
+= Can the customers be sent to a cancel URL when they click "cancel" from the PayPal checkout page? =
+Yes.
+= What is the 3 step process? =
+1. add items to cart
+2. collect buyer information on a form
+3. process transaction via paypal
+(2 step process is steps 1 and 3 above)
 
 == Screenshots ==
 
@@ -222,8 +264,19 @@ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 * notice remove on addToCartButton (Wordfence report)
 = V4.3.9.2 =
 * Enhancement : add jasonwoof patch to sanitized and encoded post data appears in html output (thanks jasonwoof)
+= V4.3.9.3 =
+* Bugfix : WP V4.6 testing and PayPal ipn file was missing sorry
+= V4.3.9.4 =
+* Enhancement : WP 4.7 validation
+= V4.3.9.5 =
+* Bugfix : duplicate amount_x field from the form
+= V4.3.9.6 =
+* Bugfix : remove PHP notice, clean more CSS, change translation way to make it more compatible, and add features, now if you add 0 as qty of an item, it removes the item and update cart
+= V4.3.9.7 =
+* Bugfix : php 5.5 compatibility
 
 == Upgrade Notice ==
 
 Always backup you WP before any upgrade. After the upgrade it's too late.
-We always try to make updates compatible with old version. If any problem, please drop us an email or post to support forums.
+We always try to make updates compatible with old version.
+If any problem, please drop us an email or post to support forums.

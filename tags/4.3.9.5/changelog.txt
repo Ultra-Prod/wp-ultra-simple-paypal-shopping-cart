@@ -1,0 +1,120 @@
+WordPress Ultra Simple Paypal Shopping Cart
+Mike Castro Demaria & Ultra Prod Team
+
+= V4.3.9.5 =
+* Bugfix : duplicate amount_x field from the form
+
+= V4.3.9.4 =
+* Enhancement : WP 4.7 validation
+
+= V4.3.9.3 =
+* Bug correction : WP V4.6 testing and PayPal ipn file was missing sorry
+
+= V4.3.9.2 =
+* Enhancement : add jasonwoof patch to sanitized and encoded post data appears in html output (thanks jasonwoof)
+
+= V4.3.9.0 =
+* notice remove on addToCartButton (Wordfence report)
+
+= V4.3.8.9 =
+* add VAT/tax display custom string
+
+= V4.3.8.8 =
+* I18n correction and links update
+
+= V4.3.8.7 =
+* Bug correction : Tax correctly transmited to paypal
+* Add feature : Shipping fee is added only once, or per quantities.
+
+= V4.3.8.6 =
+* Enhancement : WP 4.2.2 validation
+
+= V4.3.8.5 =
+* Bugfix : remove "Warning Invalid argument supplied for foreach() 141" message.
+
+= V4.3.8.4 =
+* Bugfix : checkoutButtonName correction if using custom button (thanks Lucy)
+* Enhancement : Update 3 step process help using Contact form 7 ( https://wordpress.org/plugins/contact-form-7/ ) instead Cform2 who is discontiued ( http://www.deliciousdays.com/cforms-plugin/ ).
+
+= V4.3.8.3 =
+* Enhancement : WP 4.0 validation
+
+= V4.3.8.2 =
+* Enhancement : WP 3.9 validation
+
+= V4.3.8.1 =
+* Enhancement : WP 3.8 validation
+
+= V4.3.7.2 =
+* Bugfix : widget colspan 4 and jQuery no conflict added
+* Enhancement : add more class in the CSS
+
+= V4.3.7 - 18.03.2013=
+* Add feature : Add thumbnail option is the post has thumbnail (1 shortcode per post only)
+
+= V4.3.6 - 19.10.2012=
+* Enhancement : add more class and id to the cart's html table
+
+= V4.3.5 - 01.10.2012 =
+* Enhancement : "checkout" and "add to cart" buttons can be clearly customized a bunch of html correction.
+* Add feature : Add VAT to items
+* Add feature : shipping can be display as "Free"
+* Bug correction : th missing on cart
+
+= V4.3.4 - 13.09.2012 =
+* Enhancement : reload button for qty and message display using jQuery
+
+= V4.3.3 =
+* Bugfix : quantity error on template call code, corrected now (Thanks Raylance)
+
+= V4.3.2 =
+* Bugfix : shortcode in the same post/page was recursiv, sorry (Thanks TC)
+
+= V4.3.0 =
+* Add feature : Add quantity box who can be enables / disabled .
+* Enhancement : cleaning code and restructuration ton prepare upcoming V5
+
+= V4.2.2 =
+* Add feature : Add a new function to display items count in template wpusc_cart_item_qty() .
+* Add feature : Paypal button use default language or can be customized usin wp_cart_xpcheckout_button class.
+* Enhancement : readme is  rewrited to add clarity (thanks jr-whs)
+
+= V4.2.1 =
+* Add feature : Add a new option switch, display products URL in cart.
+* Bugfix : Usage and redme doc error, show_wp_shopping_cart instead show_wpus_shopping_cart (thanks simstace)
+
+= V4.2.0 =
+* Add feature : Add the posibility to propose a 3 steps Paypal redirect (Step-1 cart's validation, Step-2 use and form page who redirect to page 3,Step-3 cart paypal validation and redirect.)
+* Add feature : Add [validate_wp_shopping_cart] shortcode for step1 cart,  [show_wp_shopping_cart] is always available for 1 step cart or final step cart.
+* Enhancement : rename functions
+* Enhancement : Add class to variation select menu
+* Enhancement : Add locate paypal button in EN, FR, DE, IT, ES
+* Cleaning : Clean and add class / id. Removing style tag in the html code
+
+= V4.1.3 =
+* Add feature : Checkbox to enable or disable empty cart message on page/post and widget
+* Add feature : Checkbox to enable or disable items in cart count cart message on page/post and widget
+* Bug correction : Settings link on plugin list was wrong
+* Bug correction : Images on about was not in the package
+
+= V4.1.2.1 =
+* Bug correction : Embed code for template bug, price is not accepted (thanks iamfabian)
+
+= V4.1.2 =
+* Compatibility: rename differents functions to avoid duplicate function name in theme or other plugin.
+* Update : label and named class for input in cart form.
+* Add : About tab, if you like my work ;-) .
+
+= V4.1.1 =
+* Bug correction : submit new Quantity dont work correctly when you use variation of the price (thanks polkan)
+* Bug correction : text "Your Cart is Empty" will display on the Checkout Page (thanks dannidar)
+
+= V4.1.0 =
+* Add feature : Unlimited variations, shipping variation
+* Add translation : Spanish translated (automatic, please correcte it if you can).
+
+= V4.0.2 =
+* bugs correction : Items with single price display in cart with zero value (thanks Lance) and button code display
+
+= V4.0.0 =
+* base improvement

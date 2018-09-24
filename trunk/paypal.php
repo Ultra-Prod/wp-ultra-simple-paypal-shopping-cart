@@ -260,39 +260,42 @@ class paypal_ipn_handler
 }
 
 // Start of IPN handling (script execution)
-$debug_enabled = get_option('wp_cart_enable_debug');
+$debug_enabled = false; 
+$debug_enabled = (!empty(get_option('wp_cart_enable_debug')))? get_option('wp_cart_enable_debug') : false;
+
+$sandbox = false;
+$sandbox = (!empty(get_option('is_sandbox')))? get_option('is_sandbox') : false;
 
 // rename previous debug file if exist 
-if (file_exists("ipn_handle_debug.log")) rename("ipn_handle_debug.log",uniqid('ipn_')."_debug.log");
-
-$ipn_handler_instance = new paypal_ipn_handler();
+if (file_exists("ipn_handle_debug.log") && is_writable("ipn_handle_debug.log") ) rename("ipn_handle_debug.log",uniqid('ipn_')."_debug.log");
 
 if ($debug_enabled)
 {
+
+	$ipn_handler_instance = new paypal_ipn_handler();
+
 	echo 'Debug is enabled. Check the '.$debug_log.' file for debug output.';
 	$ipn_handler_instance->ipn_log = true;
 	$ipn_handler_instance->ipn_log_file = $debug_log;
+
+	if ($sandbox) // Enable sandbox testing
+	{
+		$ipn_handler_instance->paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
+	}
+
+	$ipn_handler_instance->debug_log('Paypal Class Initiated by '.$_SERVER['REMOTE_ADDR'],true);
+
+	// Validate the IPN
+	if ($ipn_handler_instance->validate_ipn())
+	{
+		$ipn_handler_instance->debug_log('Creating prodcut Information to send.',true);
+
+		if(!$ipn_handler_instance->validate_and_dispatch_product())
+		{
+			$ipn_handler_instance->debug_log('IPN product validation failed.',false);
+		}
+	}
+	$ipn_handler_instance->debug_log('Paypal class finished.',true,true);
 }
-
-$sandbox = false; //get_option('wp_cart_enable_sandbox');
-
-if ($sandbox) // Enable sandbox testing
-{
-	$ipn_handler_instance->paypal_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr';
-}
-
-$ipn_handler_instance->debug_log('Paypal Class Initiated by '.$_SERVER['REMOTE_ADDR'],true);
-
-// Validate the IPN
-if ($ipn_handler_instance->validate_ipn())
-{
-	$ipn_handler_instance->debug_log('Creating prodcut Information to send.',true);
-
-      if(!$ipn_handler_instance->validate_and_dispatch_product())
-      {
-          $ipn_handler_instance->debug_log('IPN product validation failed.',false);
-      }
-}
-$ipn_handler_instance->debug_log('Paypal class finished.',true,true);
 
 ?>

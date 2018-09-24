@@ -274,7 +274,8 @@ Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 * Bugfix : remove PHP notice, clean more CSS, change translation way to make it more compatible, and add features, now if you add 0 as qty of an item, it removes the item and update cart
 = V4.3.9.7 =
 * Bugfix : php 5.5 compatibility
-
+= V4.4 =
+* Enhancement : add debug on/off and dynamic log file creation for better security (Thanks Paul King)
 == Upgrade Notice ==
 
 Always backup you WP before any upgrade. After the upgrade it's too late.

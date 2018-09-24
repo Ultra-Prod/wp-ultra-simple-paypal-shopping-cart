@@ -1,7 +1,7 @@
 <?php
 /*
 Ultra Prod WPUSSC Admin Options
-Version: v1.4.5
+Version: v1.4.6
 */
 /*
 	This program is free software; you can redistribute it
@@ -21,6 +21,9 @@ load_plugin_textdomain('wp-ultra-simple-paypal-shopping-cart', false, WUSPSC_PLU
 add_option('wp_cart_title',					__("Your Shopping Cart", "wp-ultra-simple-paypal-shopping-cart"));
 add_option('wp_cart_empty_text',			__("Your cart is empty", "wp-ultra-simple-paypal-shopping-cart"));
 add_option('wpus_shopping_cart_empty_hide',				'1');
+
+add_option('wp_cart_enable_debug',						'0');
+
 add_option('wpus_shopping_cart_shipping_per_items',		'0');
 add_option('wpus_display_link_in_cart',					'1');
 add_option('wpus_display_thumbnail_in_cart',			'0');
@@ -120,6 +123,9 @@ function show_wp_cart_options_page () {
 		// sandbox option
 		update_option('is_sandbox', (string)$_POST["is_sandbox"]);
 
+		// debug
+		update_option('wp_cart_enable_debug', (string)$_POST["wp_cart_enable_debug"]);
+
 		update_option('wpus_shopping_cart_auto_redirect_to_checkout_page', ($_POST['wpus_shopping_cart_auto_redirect_to_checkout_page']!='') ? 'checked="checked"':'' );
 		update_option('cart_checkout_page_url', (string)$_POST["cart_checkout_page_url"]);
 		update_option('wpus_shopping_cart_reset_after_redirection_to_return_page', ($_POST['wpus_shopping_cart_reset_after_redirection_to_return_page']!='') ? 'checked="checked"':'' );
@@ -203,6 +209,11 @@ function show_wp_cart_options_page () {
 	$defaultSandboxChecked = get_option('is_sandbox');
 	$defaultSandboxChecked1 = ($defaultSandboxChecked == "1")? "checked": "";
 	$defaultSandboxChecked2 = ($defaultSandboxChecked == "1")? "": "checked";
+
+	// debug
+	$defaultDebugChecked = get_option('wp_cart_enable_debug');
+	$defaultDebugChecked1 = ($defaultDebugChecked == "1")? "checked": "";
+	$defaultDebugChecked2 = ($defaultDebugChecked == "1")? "": "checked";
 
 	$emptyCartText = get_option('wp_cart_empty_text');
 	$emptyCartAllowDisplay = get_option('wpus_shopping_cart_empty_hide');
@@ -457,6 +468,11 @@ echo '
 <tr valign="top">
 <th scope="row">'. __("Paypal Sandbox (cart is in test)", "wp-ultra-simple-paypal-shopping-cart").'</th>
 <td>Test: <input type="radio" name="is_sandbox" value="1" '.$defaultSandboxChecked1.'/>&nbsp;Production: <input type="radio" name="is_sandbox" value="0" '.$defaultSandboxChecked2.'/><br> '. __('You must open a free developer account to use sandbox for your tests before go live.<br> Go to <a href="https://developer.paypal.com/">https://developer.paypal.com/</a>, register and connect.', "wp-ultra-simple-paypal-shopping-cart").'</td>
+</tr>
+
+<tr valign="top">
+<th scope="row">'. __("Paypal Debug output (create local debug log file)", "wp-ultra-simple-paypal-shopping-cart").'</th>
+<td>ON: <input type="radio" name="wp_cart_enable_debug" value="1" '.$defaultDebugChecked1.'/>&nbsp;OFF: <input type="radio" name="wp_cart_enable_debug" value="0" '.$defaultDebugChecked2.'/>'.'</td>
 </tr>
 
 <tr valign="top">

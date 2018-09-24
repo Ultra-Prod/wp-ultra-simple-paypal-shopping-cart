@@ -1,6 +1,9 @@
 WordPress Ultra Simple Paypal Shopping Cart
 Mike Castro Demaria & Ultra Prod Team
 
+= V4.4 =
+* Enhancement : add debug on/off and dynamic log file creation for better security (Thanks Paul King)
+
 = V4.3.9.7 =
 * Bugfix : php 5.5 compatibility
 

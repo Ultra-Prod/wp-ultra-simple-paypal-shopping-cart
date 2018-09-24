@@ -1,8 +1,14 @@
 <?php
+/*
+Ultra Prod WPUSSC Admin Options
+Version: v1.2
+*/
 include_once('../../../wp-load.php');
-$debug_log = "ipn_handle_debug.log"; // Debug log file name
+$debug_log = uniqid('ipn_')."_debug.log";
+//$debug_log = "ipn_handle_debug.log"; // Debug log file name
 
-class paypal_ipn_handler {
+class paypal_ipn_handler 
+{
 
    var $last_error;                 // holds the last error encountered
    var $ipn_log;                    // bool: log IPN results to text file?
@@ -15,7 +21,7 @@ class paypal_ipn_handler {
    	{
         $this->paypal_url = 'https://www.paypal.com/cgi-bin/webscr';
       	$this->last_error = '';
-      	$this->ipn_log_file = 'ipn_handle_debug.log';
+      	$this->ipn_log_file = $this->debug_log; //'ipn_handle_debug.log';
       	$this->ipn_response = '';
     }
 
@@ -254,10 +260,12 @@ class paypal_ipn_handler {
 }
 
 // Start of IPN handling (script execution)
+$debug_enabled = get_option('wp_cart_enable_debug');
+
+// rename previous debug file if exist 
+if (file_exists("ipn_handle_debug.log")) rename("ipn_handle_debug.log",uniqid('ipn_')."_debug.log");
 
 $ipn_handler_instance = new paypal_ipn_handler();
-
-$debug_enabled = true; //get_option('wp_cart_enable_debug');
 
 if ($debug_enabled)
 {

@@ -274,7 +274,7 @@ if ($debug_enabled)
 
 	$ipn_handler_instance = new paypal_ipn_handler();
 
-	echo 'Debug is enabled. Check the '.$debug_log.' file for debug output.';
+	echo 'Debug is enabled. Check the '.$debug_log.' file from plugin folder for debug output.';
 	$ipn_handler_instance->ipn_log = true;
 	$ipn_handler_instance->ipn_log_file = $debug_log;
 
